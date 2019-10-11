@@ -48,4 +48,14 @@
         android:onClick="logIn"
         android:text="Login"
         android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F59406"
+        android:onClick="logIn"
+        android:text="register"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"/>
 </LinearLayout>

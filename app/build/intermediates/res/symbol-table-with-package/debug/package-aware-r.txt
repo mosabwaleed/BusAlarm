@@ -1189,6 +1189,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
@@ -1233,6 +1234,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id register
 id right
 id right_icon
 id right_side

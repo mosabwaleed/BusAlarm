@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class LogInActivity extends AppCompatActivity {
     String stno;
     String password;
     FirebaseFirestore firestore;
+    Button register ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,13 @@ public class LogInActivity extends AppCompatActivity {
         etN = findViewById(R.id.number);
         etP = findViewById(R.id.etPassword);
         firestore = FirebaseFirestore.getInstance();
+        register = findViewById(R.id.register);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LogInActivity.this, com.example.gl_zarqa_imac8.busalarm.register.class));
+            }
+        });
     }
     public void logIn(View view) {
         firestore.collection("Users").addSnapshotListener(new EventListener<QuerySnapshot>() {
