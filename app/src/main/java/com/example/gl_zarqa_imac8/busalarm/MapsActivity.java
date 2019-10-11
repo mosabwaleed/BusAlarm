@@ -60,10 +60,6 @@ import java.text.DecimalFormat;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-
-    boolean flag = true;
-
-    private Handler handler = new Handler();
     double lat;
     double lng;
     TextView dis;

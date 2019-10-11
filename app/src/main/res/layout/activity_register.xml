@@ -141,7 +141,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Submit" />
+            android:background="#F59406"
+            android:text="Submit"
+            android:textColor="#EBDFDE" />
 
     </LinearLayout>
 </ScrollView>
