@@ -25,6 +25,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array city
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1141,6 +1142,7 @@ id chains
 id checkbox
 id chronometer
 id city
+id citys
 id clip_horizontal
 id clip_vertical
 id collapseActionView

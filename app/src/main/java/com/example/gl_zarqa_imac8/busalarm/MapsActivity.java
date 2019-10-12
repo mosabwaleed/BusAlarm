@@ -341,7 +341,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         mMap.addMarker(new MarkerOptions().position(buspo).title("the bus position")
                         .icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_marker)));
                         mMap.moveCamera(CameraUpdateFactory.newLatLng(buspo));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(buspo, 15f));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(buspo, 5f));
                         float result [] = new float[10];
                         Location.distanceBetween(buspo.latitude,buspo.longitude,mylocation.latitude,mylocation.longitude,result);
                         setResult(result);
