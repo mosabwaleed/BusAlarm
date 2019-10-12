@@ -9,6 +9,13 @@
     android:orientation="vertical">
 
 
+    <Spinner
+        android:id="@+id/citys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:entries="@array/city" />
+
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"

@@ -18,6 +18,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -64,6 +65,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     double lng;
     TextView dis;
     float [] result = new float[10];
+    Spinner city;
 
     public float[] getResult() {
         return result;
@@ -131,6 +133,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         busno = getIntent().getStringExtra("busno");
         roundno = getIntent().getStringExtra("roundno");
         dis = findViewById(R.id.dis);
+        city  = findViewById(R.id.citys);
 
         // initialize the necessary libraries
         init();
@@ -328,16 +331,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     notificationManager.notify(0,notifi.build());
                     FirebaseDatabase.getInstance().getReference().removeEventListener(this);
                 }
-
-
-
-
-
                 mMap.clear();
                     startLocationButtonClick();
                     LatLng mylocation = new LatLng(getLat(), getLng());
-                    String lat = dataSnapshot.child("buses").child("bus number " + busno).child("round number " + roundno).child("lat").getValue(String.class);
-                    String lng = dataSnapshot.child("buses").child("bus number " + busno).child("round number " + roundno).child("lng").getValue(String.class);
+                    String lat = dataSnapshot.child("buses").child(city.getSelectedItem().toString()).child("bus number " + busno).child("round number " + roundno).child("lat").getValue(String.class);
+                    String lng = dataSnapshot.child("buses").child(city.getSelectedItem().toString()).child("bus number " + busno).child("round number " + roundno).child("lng").getValue(String.class);
                     if (lat != null && lng != null) {
                         LatLng buspo = new LatLng(Double.parseDouble(lat), Double.parseDouble(lng));
                         mMap.addMarker(new MarkerOptions().position(buspo).title("the bus position")
@@ -352,15 +350,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     } else {
                         dis.setText("The bus not move yet");
                     }
-
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
-
-
     }
     public void startLocationButtonClick() {
         // Requesting ACCESS_FINE_LOCATION using Dexter library
@@ -391,4 +386,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onBackPressed() {
         moveTaskToBack(true);
     }
+
+
 }

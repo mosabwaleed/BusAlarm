@@ -11,7 +11,6 @@ public class ProfileActivity extends AppCompatActivity {
 
     public static Profile pro;
     TextView studentName,city,stno,major;
-    TextView roundnum,busnumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +27,8 @@ public class ProfileActivity extends AppCompatActivity {
     }
     public void showPositionOnMap(View view) {
         Intent in = new Intent(this, MapsActivity.class);
-        in.putExtra("roundno",roundnum.getText().toString());
-        in.putExtra("busno",busnumber.getText().toString());
+//        in.putExtra("roundno",roundnum.getText().toString());
+//        in.putExtra("busno",busnumber.getText().toString());
         startActivity(in);
     }
 }
