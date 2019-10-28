@@ -27,8 +27,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
     public void showPositionOnMap(View view) {
         Intent in = new Intent(this, MapsActivity.class);
-//        in.putExtra("roundno",roundnum.getText().toString());
-//        in.putExtra("busno",busnumber.getText().toString());
         startActivity(in);
     }
 }

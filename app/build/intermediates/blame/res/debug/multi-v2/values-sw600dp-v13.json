@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mosabwaleed\\Desktop\\BusAlarm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\mosabwaleed\\StudioProjects\\BusAlarm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mosabwaleed\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\c81e4de6b5d2c97a05ece31ea461a682\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",

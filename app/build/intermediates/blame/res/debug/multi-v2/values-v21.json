@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mosabwaleed\\Desktop\\BusAlarm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\mosabwaleed\\StudioProjects\\BusAlarm\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mosabwaleed\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\f049e8844e4b89a72f3818d8620741eb\\res\\values-v21\\values-v21.xml",

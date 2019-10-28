@@ -18,6 +18,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -130,8 +132,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        busno = getIntent().getStringExtra("busno");
-        roundno = getIntent().getStringExtra("roundno");
+
         dis = findViewById(R.id.dis);
         city  = findViewById(R.id.citys);
 
@@ -318,44 +319,80 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         mMap.setMyLocationEnabled(true);
-        FirebaseDatabase.getInstance().getReference().addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (getResult()[0] <= 1000&&getResult()[0]!=0) {
-                    NotificationCompat.Builder notifi = (NotificationCompat.Builder) new NotificationCompat.Builder(MapsActivity.this,"mosab")
-                            .setSmallIcon(R.mipmap.ic_launcher)
-                            .setContentTitle("bus arravie soon")
-                            .setContentText("distance to arrive less than 1 KM")
-                            .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-                    NotificationManager notificationManager= (NotificationManager) getSystemService(android.content.Context.NOTIFICATION_SERVICE);
-                    notificationManager.notify(0,notifi.build());
-                    FirebaseDatabase.getInstance().getReference().removeEventListener(this);
-                }
+//        FirebaseDatabase.getInstance().getReference().addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                if (getResult()[0] <= 1000&&getResult()[0]!=0) {
+//                    NotificationCompat.Builder notifi = (NotificationCompat.Builder) new NotificationCompat.Builder(MapsActivity.this,"mosab")
+//                            .setSmallIcon(R.mipmap.ic_launcher)
+//                            .setContentTitle("bus arravie soon")
+//                            .setContentText("distance to arrive less than 1 KM")
+//                            .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+//                    NotificationManager notificationManager= (NotificationManager) getSystemService(android.content.Context.NOTIFICATION_SERVICE);
+//                    notificationManager.notify(0,notifi.build());
+//                    FirebaseDatabase.getInstance().getReference().removeEventListener(this);
+//                }
                 mMap.clear();
                     startLocationButtonClick();
                     LatLng mylocation = new LatLng(getLat(), getLng());
-                    String lat = dataSnapshot.child("buses").child(city.getSelectedItem().toString()).child("bus number " + busno).child("round number " + roundno).child("lat").getValue(String.class);
-                    String lng = dataSnapshot.child("buses").child(city.getSelectedItem().toString()).child("bus number " + busno).child("round number " + roundno).child("lng").getValue(String.class);
-                    if (lat != null && lng != null) {
-                        LatLng buspo = new LatLng(Double.parseDouble(lat), Double.parseDouble(lng));
-                        mMap.addMarker(new MarkerOptions().position(buspo).title("the bus position")
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_marker)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(buspo));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(buspo, 5f));
-                        float result [] = new float[10];
-                        Location.distanceBetween(buspo.latitude,buspo.longitude,mylocation.latitude,mylocation.longitude,result);
-                        setResult(result);
-                        dis.setText("Distance to arrive : " + getResult()[0]/1000 + "km");
+                    city.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                    } else {
-                        dis.setText("The bus not move yet");
-                    }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+                            FirebaseDatabase.getInstance().getReference("buses").child(city.getSelectedItem().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    for(DataSnapshot ds : dataSnapshot.getChildren()){
+                                        for (DataSnapshot ds1 : ds.getChildren()){
+                                            String lat = ds1.child("lat").getValue(String.class);
+                                            String lng = ds1.child("lng").getValue(String.class);
+                                            System.out.println(lat + "      latlng      "+lng);
+                                            if (lat != null && lng != null) {
+                                                LatLng buspo = new LatLng(Double.parseDouble(lat), Double.parseDouble(lng));
+                                                mMap.addMarker(new MarkerOptions().position(buspo).title("the bus position")
+                                                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_marker)));}
+                                        }
+                                    }
 
-            }
-        });
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                            });
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+
+//                    String lat = dataSnapshot.child("buses").child(city.getSelectedItem().toString()).child("bus number " + busno).child("round number " + roundno).child("lat").getValue(String.class);
+//                    String lng = dataSnapshot.child("buses").child(city.getSelectedItem().toString()).child("bus number " + busno).child("round number " + roundno).child("lng").getValue(String.class);
+//                    System.out.println(lat + "      latlng      "+lng);
+//                    if (lat != null && lng != null) {
+//                        LatLng buspo = new LatLng(Double.parseDouble(lat), Double.parseDouble(lng));
+//                        mMap.addMarker(new MarkerOptions().position(buspo).title("the bus position")
+//                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_marker)));
+//                        mMap.moveCamera(CameraUpdateFactory.newLatLng(buspo));
+//                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(buspo, 5f));
+//                        float result [] = new float[10];
+//                        Location.distanceBetween(buspo.latitude,buspo.longitude,mylocation.latitude,mylocation.longitude,result);
+//                        setResult(result);
+//                        dis.setText("Distance to arrive : " + getResult()[0]/1000 + "km");
+//
+//                    } else {
+//                        dis.setText("The bus not move yet");
+//                    }
+//            }
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
     }
     public void startLocationButtonClick() {
         // Requesting ACCESS_FINE_LOCATION using Dexter library

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
 MERGED from [com.android.support:multidex:1.0.3] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\67e4b609d84a3f5778799445e116f670\AndroidManifest.xml:17:1-22:12
 MERGED from [com.karumi:dexter:4.2.0] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\dexter-4.2.0.aar\66505ce66d227c0dbf1394f1fe9a45c5\AndroidManifest.xml:17:1-32:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\c81e4de6b5d2c97a05ece31ea461a682\AndroidManifest.xml:17:1-24:12
@@ -67,33 +67,33 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\mosabwaleed\.grad
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\firebase-database-collection-16.0.1.aar\ea18e7069532be7372aa8aac8ea8b033\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-16.0.1.aar\ef5f40387f6d92600e5c7cb8b487d45b\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\548d041befcf20fdc5d12397a217572a\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
 	package
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:3:5-50
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:3:5-50
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:1-46:12
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:9:22-76
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:9:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:10:5-81
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:10:22-78
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:10:22-78
 application
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:12:5-44:19
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:12:5-44:19
 MERGED from [com.karumi:dexter:4.2.0] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\dexter-4.2.0.aar\66505ce66d227c0dbf1394f1fe9a45c5\AndroidManifest.xml:26:5-30:19
 MERGED from [com.karumi:dexter:4.2.0] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\dexter-4.2.0.aar\66505ce66d227c0dbf1394f1fe9a45c5\AndroidManifest.xml:26:5-30:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\c81e4de6b5d2c97a05ece31ea461a682\AndroidManifest.xml:22:5-20
@@ -157,59 +157,59 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\mosabwalee
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\626b43a440bebd014d5524eeca063465\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:15:9-41
 	android:roundIcon
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:16:9-54
 	android:icon
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:18:9-40
 activity#com.example.gl_zarqa_imac8.busalarm.register
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:19:9-55
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:19:9-55
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:19:19-43
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:19:19-43
 activity#com.example.gl_zarqa_imac8.busalarm.MainActivity
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:20:9-26:20
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:20:9-26:20
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:20:19-47
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:20:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:24:27-74
 activity#com.example.gl_zarqa_imac8.busalarm.LogInActivity
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:27:9-51
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:27:9-51
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:27:19-48
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:27:19-48
 activity#com.example.gl_zarqa_imac8.busalarm.ProfileActivity
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:28:9-53
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:28:9-53
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:28:19-50
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:28:19-50
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:37:9-39:55
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:37:9-39:55
 	android:value
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:39:13-52
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:39:13-52
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:38:13-58
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:38:13-58
 activity#com.example.gl_zarqa_imac8.busalarm.MapsActivity
-ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:41:9-43:59
+ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:41:9-43:59
 	android:label
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:43:13-56
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:43:13-56
 	android:name
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml:42:13-41
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml:42:13-41
 uses-sdk
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:multidex:1.0.3] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\67e4b609d84a3f5778799445e116f670\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:multidex:1.0.3] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\67e4b609d84a3f5778799445e116f670\AndroidManifest.xml:20:5-43
 MERGED from [com.karumi:dexter:4.2.0] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\dexter-4.2.0.aar\66505ce66d227c0dbf1394f1fe9a45c5\AndroidManifest.xml:22:5-24:41
@@ -336,18 +336,18 @@ MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\mos
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-16.0.1.aar\ef5f40387f6d92600e5c7cb8b487d45b\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\548d041befcf20fdc5d12397a217572a\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.16.1] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\grpc-android-1.16.1.aar\548d041befcf20fdc5d12397a217572a\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\31e1461266ba5ccbcdcb70f83b8d9365\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\mosabwaleed\Desktop\BusAlarm\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\mosabwaleed\StudioProjects\BusAlarm\app\src\main\AndroidManifest.xml
 activity#com.karumi.dexter.DexterActivity
 ADDED from [com.karumi:dexter:4.2.0] C:\Users\mosabwaleed\.gradle\caches\transforms-1\files-1.1\dexter-4.2.0.aar\66505ce66d227c0dbf1394f1fe9a45c5\AndroidManifest.xml:27:9-29:72
 	android:theme
