@@ -102,7 +102,7 @@
             android:background="@color/colorPrimary"
             android:orientation="horizontal">
 
-            <android.support.v7.widget.AppCompatImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="#F59406"
@@ -117,6 +117,32 @@
                 android:background="#F59406"
                 android:onClick="showPositionOnMap"
                 android:text="Bus Position"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#F59406"
+                android:src="@drawable/bus_marker"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:width="100dp"
+                android:background="#F59406"
+                android:onClick="showbusronded"
+                android:text="Bus Rounded"
                 android:textColor="#fff" />
         </LinearLayout>
 

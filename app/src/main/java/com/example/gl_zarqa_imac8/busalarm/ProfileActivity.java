@@ -1,7 +1,8 @@
 package com.example.gl_zarqa_imac8.busalarm;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -28,5 +29,11 @@ public class ProfileActivity extends AppCompatActivity {
     public void showPositionOnMap(View view) {
         Intent in = new Intent(this, MapsActivity.class);
         startActivity(in);
+    }
+    public void showbusronded(View view) {
+        String url = "http://zu.edu.jo/ar/Deans/AffairsOfDeanship/Transport.aspx";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
     }
 }
