@@ -14,11 +14,19 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
-
     <string-array name="city">
         <item name ="Zarqa">Zarqa</item>
-        <item name ="Amman">Amman</item>
-        <item name ="Mafrak">Mafrak</item>
-        <item name ="Irbid">Irbid</item>
+        <item name ="tabrbor+istiklal">tabrbor&amp;istiklal</item>
+        <item name ="raghadan">raghadan</item>
+        <item name ="irbid">irbid</item>
+        <item name ="balaama+hashmeh">balaama&amp;hashmeh</item>
+        <item name ="mosq">university mosque</item>
+        <item name ="azraq">azraq</item>
+        <item name ="gomrok+sahab">gomrok&amp;sahab</item>
+        <item name ="jerash">jerash</item>
+        <item name ="mafraq">mafraq</item>
+        <item name ="salt">salt</item>
+        <item name ="deleel">deleel</item>
+        <item name ="zaatary">zaatary</item>
     </string-array>
 </resources>

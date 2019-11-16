@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.provider.Settings;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -39,6 +40,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -46,12 +48,19 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
+
+import java.util.Calendar;
+import java.util.Objects;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -61,6 +70,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     TextView dis;
     float [] result = new float[10];
     Spinner city;
+    String days,citystr = "";
+    FirebaseFirestore firestore;
 
     public float[] getResult() {
         return result;
@@ -126,6 +137,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        firestore = FirebaseFirestore.getInstance();
+
         dis = findViewById(R.id.dis);
         city  = findViewById(R.id.citys);
 
@@ -180,13 +193,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         if (mCurrentLocation != null) {
             setLat(mCurrentLocation.getLatitude());
             setLng(mCurrentLocation.getLongitude());
-            //txtLocationResult.setText("Lat: " + mCurrentLocation.getLatitude() + ", " +"Lng: " + mCurrentLocation.getLongitude());
-            // giving a blink animation on TextView
-            //txtLocationResult.setAlpha(0);
-            //txtLocationResult.animate().alpha(1).setDuration(300);
-
-            // location last updated time
-
         }
 
         toggleButtons();
@@ -313,19 +319,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
 
         mMap.setMyLocationEnabled(true);
-//        FirebaseDatabase.getInstance().getReference().addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                if (getResult()[0] <= 1000&&getResult()[0]!=0) {
-//                    NotificationCompat.Builder notifi = (NotificationCompat.Builder) new NotificationCompat.Builder(MapsActivity.this,"mosab")
-//                            .setSmallIcon(R.mipmap.ic_launcher)
-//                            .setContentTitle("bus arravie soon")
-//                            .setContentText("distance to arrive less than 1 KM")
-//                            .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-//                    NotificationManager notificationManager= (NotificationManager) getSystemService(android.content.Context.NOTIFICATION_SERVICE);
-//                    notificationManager.notify(0,notifi.build());
-//                    FirebaseDatabase.getInstance().getReference().removeEventListener(this);
-//                }
                 mMap.clear();
                     startLocationButtonClick();
                     LatLng mylocation = new LatLng(getLat(), getLng());
@@ -342,9 +335,54 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                             String lng = ds1.child("lng").getValue(String.class);
                                             System.out.println(lat + "      latlng      "+lng);
                                             if (lat != null && lng != null) {
+                                                String roundnum = ds1.getKey().substring(ds1.getKey().length()-2);
                                                 LatLng buspo = new LatLng(Double.parseDouble(lat), Double.parseDouble(lng));
-                                                mMap.addMarker(new MarkerOptions().position(buspo).title("the bus position")
-                                                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_marker)));}
+                                                MarkerOptions marker = new MarkerOptions().position(buspo).title(roundnum)
+                                                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_marker));
+                                                mMap.addMarker(marker);
+
+                                                if (city.getSelectedItem().toString().equalsIgnoreCase("zarqa")){
+                                                    citystr = "";
+                                                }
+                                                else if(city.getSelectedItem().toString().equalsIgnoreCase("university mosque")){
+                                                    citystr = "mosq";
+                                                }
+                                                else {
+                                                    citystr = city.getSelectedItem().toString();
+                                                }
+                                                Calendar calendar = Calendar.getInstance();
+                                                int day = calendar.get(Calendar.DAY_OF_WEEK);
+
+                                                switch (day) {
+                                                    case Calendar.SUNDAY:
+                                                    case Calendar.TUESDAY:
+                                                    case Calendar.THURSDAY:
+                                                        days = "stuth";
+                                                        break;
+                                                    case Calendar.MONDAY:
+                                                    case Calendar.WEDNESDAY:
+                                                        days = "mw";
+                                                        break;
+                                                    default:
+                                                        days = "";
+                                                        break;
+                                                }
+                                                mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                                                    @Override
+                                                    public boolean onMarkerClick(Marker marker) {
+                                                        firestore.collection(citystr).document(days).addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                                                            @Override
+                                                            public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
+                                                                String roundstart = String.valueOf((documentSnapshot.get(marker.getTitle().trim())));
+
+                                                                Toast.makeText(MapsActivity.this,ds.getKey()+"  round number is "+marker.getTitle()+" this Round Started at  "+roundstart,Toast.LENGTH_LONG).show();
+                                                            }
+                                                        });
+
+                                                        return true;
+                                                    }
+                                                });
+                                            }
                                         }
                                     }
 
